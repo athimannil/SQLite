@@ -103,6 +103,46 @@
 
 - (void)webViewDidFinishLoad:(UIWebView*)theWebView
 {
+    
+    //new added line
+    
+    
+    
+    
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"database.db"];
+    success = [fileManager fileExistsAtPath:writableDBPath];
+    
+    //delete database if exists
+    if(success)
+        
+    {
+        success =[fileManager removeItemAtPath:writableDBPath error:&error];
+        if(!success){
+            NSLog(@"Failed deleting database... %@",error );
+        }
+    }
+        NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"www/database.db"];
+        NSLog(@"Path : %@",defaultDBPath);
+    
+        success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+    
+    if (!success) {
+            NSLog(@"Failed moving database... %@",error );
+            
+        }
+    
+    
+    
+    
+    //end of added line
+    
+    
+    
     // Black base color for background matches the native apps
     theWebView.backgroundColor = [UIColor blackColor];
 
@@ -111,13 +151,20 @@
 
 /* Comment out the block below to over-ride */
 
-/*
+
 
 - (void) webViewDidStartLoad:(UIWebView*)theWebView
 {
+
+    
+    
+    
+    
+    
+    
     return [super webViewDidStartLoad:theWebView];
 }
-
+/*
 - (void) webView:(UIWebView*)theWebView didFailLoadWithError:(NSError*)error
 {
     return [super webView:theWebView didFailLoadWithError:error];
