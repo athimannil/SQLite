@@ -40,6 +40,7 @@
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		3D29AC8F469A498DA2861F19 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EAF638321DC349BCB970F69D /* SQLitePlugin.m */; };
 		6544FC2BA8F04AE5A8DD3958 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 97CA4DC035744FA4A12AD908 /* libsqlite3.dylib */; };
+		77C9459E934F46F9BE41451F /* CDVLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 93115B78613C450086609A35 /* CDVLogger.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,8 @@
 		EAF638321DC349BCB970F69D /* SQLitePlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SQLitePlugin.m"; path = "com.brodysoft.sqlitePlugin/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		96CACA2FFDBC49ABAEB0607C /* SQLitePlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SQLitePlugin.h"; path = "com.brodysoft.sqlitePlugin/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		97CA4DC035744FA4A12AD908 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsqlite3.dylib"; path = "usr/lib/libsqlite3.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		93115B78613C450086609A35 /* CDVLogger.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVLogger.m"; path = "org.apache.cordova.console/CDVLogger.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		C25FFEEE04604A2A9215718A /* CDVLogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVLogger.h"; path = "org.apache.cordova.console/CDVLogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -231,6 +234,8 @@
 			children = (
 				EAF638321DC349BCB970F69D /* SQLitePlugin.m */,
 				96CACA2FFDBC49ABAEB0607C /* SQLitePlugin.h */,
+				93115B78613C450086609A35 /* CDVLogger.m */,
+				C25FFEEE04604A2A9215718A /* CDVLogger.h */,
 			);
 			name = Plugins;
 			path = "Workshop/Plugins";
@@ -426,6 +431,7 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				3D29AC8F469A498DA2861F19 /* SQLitePlugin.m in Sources */,
+				77C9459E934F46F9BE41451F /* CDVLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
