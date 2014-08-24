@@ -268,6 +268,37 @@ static NSString *stripFragment(NSString* url)
 
 - (void)webViewDidStartLoad:(UIWebView*)webView
 {
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     VerboseLog(@"webView didStartLoad (before). state=%d loadCount=%d", _state, _loadCount);
     BOOL fireCallback = NO;
     switch (_state) {

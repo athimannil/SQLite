@@ -619,6 +619,36 @@
  */
 - (void)webViewDidStartLoad:(UIWebView*)theWebView
 {
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     NSLog(@"Resetting plugins due to page load.");
     [_commandQueue resetRequestId];
     [[NSNotificationCenter defaultCenter] postNotification:[NSNotification notificationWithName:CDVPluginResetNotification object:self.webView]];
